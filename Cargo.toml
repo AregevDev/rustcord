@@ -1,0 +1,9 @@
+[package]
+name = "discord_rpc"
+version = "0.1.0"
+authors = ["AregevDev <aregevdev@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+libc = "0.2.48"
+discord_rpc-sys = { path = "sys", version = "0.1.0" }
