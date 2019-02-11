@@ -6,7 +6,7 @@ edition = "2018"
 description = "A safe wrapper around the Discord Rich Presence C API"
 keywords = ["discord"]
 repository = "https://gitlab.com/AregevDev/discord_rpc"
-categories = [""]
+categories = ["ffi"]
 license = "Apache-2.0"
 readme = "README.md"
 
