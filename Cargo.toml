@@ -3,6 +3,12 @@ name = "discord_rpc"
 version = "0.1.0"
 authors = ["AregevDev <aregevdev@gmail.com>"]
 edition = "2018"
+description = "A safe wrapper around the Discord Rich Presence C API"
+keywords = ["discord"]
+repository = "https://gitlab.com/AregevDev/discord_rpc"
+categories = [""]
+license = "Apache-2.0"
+readme = "README.md"
 
 [dependencies]
 libc = "0.2.48"
