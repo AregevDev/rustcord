@@ -3,6 +3,12 @@ name = "discord_rpc-sys"
 version = "0.1.0"
 authors = ["AregevDev <aregevdev@gmail.com>"]
 edition = "2018"
+description = "Raw C bindings for the Discord Rich Presence API"
+keywords = ["discord"]
+repository = "https://gitlab.com/AregevDev/discord_rpc"
+categories = ["ffi"]
+license = "Apache-2.0"
+readme = "README.md"
 
 [dependencies]
 
