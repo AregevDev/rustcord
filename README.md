@@ -1,5 +1,7 @@
 # discord_rpc
 A safe wrapper around the Discord Rich Presence C API Updated to the latest library version.  
+Wrapper version: 0.1.0  
+Discord RPC version: 3.4.0
 
 ### Example
 ```rust
