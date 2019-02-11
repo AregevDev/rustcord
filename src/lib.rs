@@ -8,7 +8,7 @@ mod presence;
 pub use crate::event_handlers::EventHandlers;
 pub use crate::join_request::{JoinRequestReply, User};
 pub use crate::presence::RichPresence;
-use discord_rpc_sys as sys;
+use rustcord_sys as sys;
 
 use std::ffi::{CString, NulError};
 use std::ptr;

@@ -1,6 +1,6 @@
 use crate::join_request::{JoinRequestReply, User};
 use crate::EventHandlers;
-use discord_rpc_sys as sys;
+use rustcord_sys as sys;
 use libc;
 use std::ffi::CStr;
 

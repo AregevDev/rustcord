@@ -1,4 +1,4 @@
-use discord_rpc_sys as sys;
+use rustcord_sys as sys;
 use libc;
 use std::ffi::{CString, NulError};
 use std::ptr;

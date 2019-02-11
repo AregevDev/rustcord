@@ -1,6 +1,6 @@
 use crate::event_wrappers::*;
 use crate::join_request::*;
-use discord_rpc_sys as sys;
+use rustcord_sys as sys;
 
 /// A trait for handling the presence events
 pub trait EventHandlers {

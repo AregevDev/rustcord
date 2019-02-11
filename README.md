@@ -1,4 +1,4 @@
-# discord_rpc
+# rustcord
 A safe wrapper around the Discord Rich Presence C API, updated to the latest library version.  
 Wrapper version: 0.1.0
 Discord RPC version: 3.4.0
@@ -38,7 +38,7 @@ fn main() {
 ```
 
 ### Documentation
-[here](https://docs.rs/discord_rpc)
+[here](https://docs.rs/rustcord)
 
 ### Useful links
 [The C API Documentation](https://discordapp.com/developers/docs/rich-presence/how-to)  
