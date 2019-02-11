@@ -2,7 +2,38 @@
 A safe wrapper around the Discord Rich Presence C API Updated to the latest library version.  
 
 ### Example
-tbd
+```rust
+use discord_rpc::{DiscordRPC, EventHandlers, RichPresence, User};
+use std::time::SystemTime;
+
+struct Handlers;
+
+impl EventHandlers for Handlers {
+    fn ready(_user: User) {
+        println!("Welcome {}#{}", _user.username, _user.discriminator);
+    }
+}
+
+fn main() {
+    let discord = DiscordRPC::init::<Handlers>("544523578855391241", true, None)
+        .expect("Could no initialize RPC");
+
+    let presence = RichPresence {
+        state: Some("Mining few crystals".into()),
+        start_time: Some(SystemTime::now()),
+        large_image_key: Some("rust".into()),
+        large_image_text: Some("Rust".into()),
+        small_image_key: Some("amethyst".into()),
+        small_image_text: Some("Amethyst".into()),
+        ..Default::default()
+    };
+
+    discord.update_presence(presence).expect("Could not update presence");
+    loop {
+        discord.run_callbacks()
+    }
+}
+```
 
 ### Documentation
 [here](https://docs.rs/discord_rpc)
