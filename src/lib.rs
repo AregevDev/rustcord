@@ -50,7 +50,11 @@ pub struct Rustcord;
 
 impl Rustcord {
     /// Initializes the Discord Rich Presence API.
-    pub fn init<EH: EventHandlers>(app_id: &str, auto_register: bool, steam_id: Option<&str>) -> Result<Rustcord, NulError> {
+    pub fn init<EH: EventHandlers>(
+        app_id: &str,
+        auto_register: bool,
+        steam_id: Option<&str>,
+    ) -> Result<Rustcord, NulError> {
         let mut sys_handlers = event_handlers::wrap::<EH>();
         unsafe {
             sys::Discord_Initialize(
