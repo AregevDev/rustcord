@@ -108,3 +108,87 @@ impl RichPresence {
         })
     }
 }
+
+/// A Builder struct for RichPresence which gives more ergonomic API
+#[derive(Clone, Debug)]
+pub struct RichPresenceBuilder {
+    inner: RichPresence,
+}
+
+impl RichPresenceBuilder {
+    pub fn new() -> Self {
+        RichPresenceBuilder {
+            inner: RichPresence::default(),
+        }
+    }
+
+    pub fn state(mut self, state: &str) -> Self {
+        self.inner.state = Some(state.to_owned());
+        self
+    }
+
+    pub fn details(mut self, details: &str) -> Self {
+        self.inner.details = Some(details.to_owned());
+        self
+    }
+
+    pub fn start_time(mut self, start_time: SystemTime) -> Self {
+        self.inner.start_time = Some(start_time);
+        self
+    }
+
+    pub fn end_time(mut self, end_time: SystemTime) -> Self {
+        self.inner.end_time = Some(end_time);
+        self
+    }
+
+    pub fn large_image_key(mut self, large_image_key: &str) -> Self {
+        self.inner.large_image_key = Some(large_image_key.to_owned());
+        self
+    }
+
+    pub fn large_image_text(mut self, large_image_text: &str) -> Self {
+        self.inner.large_image_text = Some(large_image_text.to_owned());
+        self
+    }
+
+    pub fn small_image_key(mut self, small_image_key: &str) -> Self {
+        self.inner.small_image_key = Some(small_image_key.to_owned());
+        self
+    }
+
+    pub fn small_image_text(mut self, small_image_text: &str) -> Self {
+        self.inner.small_image_text = Some(small_image_text.to_owned());
+        self
+    }
+
+    pub fn party_id(mut self, party_id: &str) -> Self {
+        self.inner.party_id = Some(party_id.to_owned());
+        self
+    }
+
+    pub fn party_size(mut self, party_size: u32) -> Self {
+        self.inner.party_size = Some(party_size);
+        self
+    }
+
+    pub fn party_max(mut self, party_max: u32) -> Self {
+        self.inner.party_max = Some(party_max);
+        self
+    }
+
+    pub fn spectate_secret(mut self, spectate_secret: &str) -> Self {
+        self.inner.spectate_secret = Some(spectate_secret.to_owned());
+        self
+    }
+
+    pub fn join_secret(mut self, join_secret: &str) -> Self {
+        self.inner.join_secret = Some(join_secret.to_owned());
+        self
+    }
+
+    pub fn build(mut self) -> RichPresence {
+        self.inner
+    }
+}
+
