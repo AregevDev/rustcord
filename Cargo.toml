@@ -3,7 +3,7 @@ name = "rustcord"
 version = "0.1.0"
 authors = ["AregevDev <aregevdev@gmail.com>"]
 edition = "2018"
-description = "A safe wrapper around the Discord Rich Presence C API"
+description = "A safe wrapper around the Discord Rich Presence API"
 keywords = ["discord"]
 repository = "https://gitlab.com/AregevDev/rustcord"
 categories = ["ffi"]
@@ -12,4 +12,4 @@ readme = "README.md"
 
 [dependencies]
 libc = "0.2.48"
-rustcord-sys = { path = "sys", version = "0.1.0" }
+rustcord-sys = "0.1.0"
