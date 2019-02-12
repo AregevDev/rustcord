@@ -1,7 +1,7 @@
 use crate::join_request::{JoinRequestReply, User};
 use crate::EventHandlers;
-use rustcord_sys as sys;
 use libc;
+use rustcord_sys as sys;
 use std::ffi::CStr;
 
 pub(crate) unsafe extern "C" fn ready_wrapper<EH: EventHandlers>(

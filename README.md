@@ -5,7 +5,7 @@ Discord RPC version: 3.4.0
 
 ### Example
 ```rust
-use discord_rpc::{DiscordRPC, EventHandlers, RichPresence, User};
+use discord_rpc::{DiscordRPC, EventHandlers, RichPresenceBuilder, User};
 use std::time::SystemTime;
 
 struct Handlers;
@@ -20,16 +20,15 @@ fn main() {
     let discord = DiscordRPC::init::<Handlers>("544523578855391241", true, None)
         .expect("Could no initialize RPC");
 
-    let presence = RichPresence {
-        state: Some("Mining few crystals".into()),
-        start_time: Some(SystemTime::now()),
-        large_image_key: Some("rust".into()),
-        large_image_text: Some("Rust".into()),
-        small_image_key: Some("amethyst".into()),
-        small_image_text: Some("Amethyst".into()),
-        ..Default::default()
-    };
-
+    let presence = RichPresenceBuilder::new()
+                .state("Rusting")
+                .details("Mining few crystals")
+                .large_image_key("rust")
+                .large_image_text("Rust")
+                .small_image_key("amethyst")
+                .small_image_text("Amethyst")
+                .build();
+                
     discord.update_presence(presence).expect("Could not update presence");
     loop {
         discord.run_callbacks()

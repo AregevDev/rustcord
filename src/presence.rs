@@ -1,5 +1,5 @@
-use rustcord_sys as sys;
 use libc;
+use rustcord_sys as sys;
 use std::ffi::{CString, NulError};
 use std::ptr;
 use std::time::*;
@@ -191,4 +191,3 @@ impl RichPresenceBuilder {
         self.inner
     }
 }
-
