@@ -14,15 +14,15 @@ use std::ffi::{CString, NulError};
 use std::ptr;
 
 /// The main struct of the API providing the RPC methods
-pub struct DiscordRPC;
+pub struct Rustcord;
 
-impl DiscordRPC {
+impl Rustcord {
     /// Initializes the Discord Rich Presence API.
     pub fn init<EH: EventHandlers>(
         app_id: &str,
         auto_register: bool,
         steam_id: Option<&str>,
-    ) -> Result<DiscordRPC, NulError> {
+    ) -> Result<Rustcord, NulError> {
         let mut sys_handlers = event_handlers::wrap::<EH>();
         unsafe {
             sys::Discord_Initialize(
@@ -36,7 +36,7 @@ impl DiscordRPC {
             );
         }
 
-        Ok(DiscordRPC)
+        Ok(Rustcord)
     }
 
     /// Updates the callback handlers.
@@ -57,7 +57,7 @@ impl DiscordRPC {
         Ok(())
     }
 
-    /// Clears the rich present screen.
+    /// Clears the rich present screen.DiscordRPC
     pub fn clear_presence(&self) {
         unsafe {
             sys::Discord_ClearPresence();
@@ -73,7 +73,7 @@ impl DiscordRPC {
     }
 }
 
-impl Drop for DiscordRPC {
+impl Drop for Rustcord {
     fn drop(&mut self) {
         unsafe {
             sys::Discord_Shutdown();
