@@ -187,7 +187,7 @@ impl RichPresenceBuilder {
         self
     }
 
-    pub fn build(mut self) -> RichPresence {
+    pub fn build(self) -> RichPresence {
         self.inner
     }
 }
