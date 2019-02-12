@@ -4,9 +4,9 @@ version = "0.1.0"
 authors = ["AregevDev <aregevdev@gmail.com>"]
 edition = "2018"
 description = "Raw FFI bindings for the Discord Rich Presence API"
-keywords = ["discord"]
-repository = "https://gitlab.com/AregevDev/discord_rpc"
-categories = ["ffi"]
+keywords = ["discord", "rpc"]
+repository = "https://github.com/AregevDev/discord_rpc"
+categories = ["api-bindings"]
 license = "Apache-2.0"
 readme = "README.md"
 
