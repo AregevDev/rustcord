@@ -1,0 +1,3 @@
+[submodule "sys/discord-rpc"]
+	path = sys/discord-rpc
+	url = https://github.com/discordapp/discord-rpc
