@@ -1,2 +1,2 @@
-sys/discord-rpc-3.4.0/* linguist-vendored
-*.rb linguist-language=C
+rustcord-sys/discord-rpc-3.4.0/* linguist-vendored
+rustcord-sys/*.h linguist-language=C
