@@ -1,6 +1,6 @@
 [package]
 name = "rustcord"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["AregevDev <aregevdev@gmail.com>"]
 edition = "2018"
 description = "A safe wrapper around the Discord Rich Presence API"
