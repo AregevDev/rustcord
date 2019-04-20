@@ -12,4 +12,4 @@ readme = "README.md"
 
 [dependencies]
 libc = "0.2.48"
-rustcord-sys = { path = "rustcord-sys" }
+rustcord-sys = { path = "rustcord-sys" version = "0.2.2" }
