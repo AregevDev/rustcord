@@ -1,2 +1,1 @@
-#include "discord_register.h"
-#include "discord_rpc.h"
+#include "discord-rpc/include/discord_rpc.h"
