@@ -7,7 +7,7 @@ pub trait EventHandlers {
     /// Called when the presence is displayed
     fn ready(_user: User) {}
 
-    /// Called an error occurred with the presence
+    /// Called when an error occurred with the presence
     fn errored(_errcode: i32, _message: &str) {}
 
     /// Called when the presence is shut down or closed
