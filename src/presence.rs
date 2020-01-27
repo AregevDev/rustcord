@@ -26,10 +26,10 @@ pub struct RichPresence {
     /// Tooltip for the large image. Maximum of 128 bytes.
     pub large_image_text: Option<String>,
 
-    /// Name of the uploaded image for the large profile artwork. Maximum of 32 bytes.
+    /// Name of the uploaded image for the small profile artwork. Maximum of 32 bytes.
     pub small_image_key: Option<String>,
 
-    /// Tooltip for the large image. Maximum of 128 bytes.
+    /// Tooltip for the small image. Maximum of 128 bytes.
     pub small_image_text: Option<String>,
 
     /// ID of the player's party, lobby, or group. Maximum of 128 bytes.

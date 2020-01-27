@@ -7,7 +7,7 @@ pub struct User {
     pub avatar: String,
 }
 
-/// A reply to the a user's request
+/// A reply to a user's request
 #[derive(Clone, Hash, PartialEq, Debug)]
 pub enum JoinRequestReply {
     No,
