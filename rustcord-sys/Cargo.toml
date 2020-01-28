@@ -13,5 +13,5 @@ readme = "README.md"
 [dependencies]
 
 [build-dependencies]
-bindgen = "0.47.1"
-cmake = "0.1.35"
+bindgen = "0.52.0"
+cmake = "0.1.42"

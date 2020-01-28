@@ -11,5 +11,5 @@ license = "Apache-2.0"
 readme = "README.md"
 
 [dependencies]
-libc = "0.2.48"
+libc = "0.2.66"
 rustcord-sys = { path = "rustcord-sys", version = "0.2.2" }
