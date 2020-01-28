@@ -46,5 +46,5 @@ fn main() -> Result<(), io::Error> {
 ### License
 Apache-2.0
 
-[docs_rs]:(https://docs.rs/rustcord)
-[rpc_docs]:(https://discordapp.com/developers/docs/rich-presence/how-to)
+[docs_rs]:https://docs.rs/rustcord
+[rpc_docs]:https://discordapp.com/developers/docs/rich-presence/how-to
