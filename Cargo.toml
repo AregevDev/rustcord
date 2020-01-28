@@ -1,6 +1,6 @@
 [package]
 name = "rustcord"
-version = "0.2.2"
+version = "0.2.3"
 authors = ["AregevDev <aregevdev@gmail.com>"]
 edition = "2018"
 description = "A safe wrapper around the Discord Rich Presence API"
@@ -12,4 +12,4 @@ readme = "README.md"
 
 [dependencies]
 libc = "0.2.66"
-rustcord-sys = { path = "rustcord-sys", version = "0.2.2" }
+rustcord-sys = { path = "rustcord-sys", version = "0.2.3" }
