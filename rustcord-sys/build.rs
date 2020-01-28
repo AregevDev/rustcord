@@ -4,7 +4,10 @@ use std::path::PathBuf;
 const LIB_VERSION: &str = "3.4.0";
 
 fn main() {
-    let config = cmake::Config::new("discord-rpc".to_string()).build();
+    let config = cmake::Config::new("discord-rpc".to_string())
+        .define("BUILD_EXAMPLES", "OFF")
+        .build();
+
     println!("cargo:rustc-link-search={}", config.join("lib").display());
     println!("cargo:rustc-link-search={}", config.join("lib64").display());
 
