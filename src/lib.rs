@@ -1,20 +1,19 @@
 //! A safe wrapper around the Discord RichPresence API
 //! ### Example
 //! ```rust
-//! use discord_rpc::{DiscordRPC, EventHandlers, RichPresenceBuilder, User};
-//! use std::time::SystemTime;
+//! use rustcord::{Rustcord, EventHandlers, User, RichPresenceBuilder};
+//! use std::io;
 //!
-//! struct Handlers;
+//! pub struct Handlers;
 //!
 //! impl EventHandlers for Handlers {
-//!     fn ready(_user: User) {
-//!         println!("Welcome {}#{}", _user.username, _user.discriminator);
+//!     fn ready(user: User) {
+//!         println!("User {}#{} logged in...", user.username, user.discriminator);
 //!     }
 //! }
 //!
-//! fn main() {
-//!     let discord = DiscordRPC::init::<Handlers>("544523578855391241", true, None)
-//!         .expect("Could no initialize RPC");
+//! fn main() -> Result<(), io::Error> {
+//!     let discord = Rustcord::init::<Handlers>("544523578855391241", true, None)?;
 //!
 //!     let presence = RichPresenceBuilder::new()
 //!         .state("Rusting")
@@ -25,10 +24,12 @@
 //!         .small_image_text("Amethyst")
 //!         .build();
 //!
-//!     discord.update_presence(presence).expect("Could not update presence");
+//!     discord.update_presence(presence)?;
 //!     loop {
-//!         discord.run_callbacks()
+//!         discord.run_callbacks();
 //!     }
+//!
+//!     Ok(())
 //! }
 //! ```
 

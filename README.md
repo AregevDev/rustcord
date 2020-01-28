@@ -5,42 +5,46 @@ Discord RPC version: 3.4.0
 
 ### Example
 ```rust
-use discord_rpc::{DiscordRPC, EventHandlers, RichPresenceBuilder, User};
-use std::time::SystemTime;
+use rustcord::{Rustcord, EventHandlers, User, RichPresenceBuilder};
+use std::io;
 
-struct Handlers;
+pub struct Handlers;
 
 impl EventHandlers for Handlers {
-    fn ready(_user: User) {
-        println!("Welcome {}#{}", _user.username, _user.discriminator);
+    fn ready(user: User) {
+        println!("User {}#{} logged in...", user.username, user.discriminator);
     }
 }
 
-fn main() {
-    let discord = DiscordRPC::init::<Handlers>("544523578855391241", true, None)
-        .expect("Could no initialize RPC");
+fn main() -> Result<(), io::Error> {
+    let discord = Rustcord::init::<Handlers>("APP_ID_HERE", true, None)?;
 
     let presence = RichPresenceBuilder::new()
-                .state("Rusting")
-                .details("Mining few crystals")
-                .large_image_key("rust")
-                .large_image_text("Rust")
-                .small_image_key("amethyst")
-                .small_image_text("Amethyst")
-                .build();
-                
-    discord.update_presence(presence).expect("Could not update presence");
+        .state("Rusting")
+        .details("Mining few crystals")
+        .large_image_key("rust")
+        .large_image_text("Rust")
+        .small_image_key("amethyst")
+        .small_image_text("Amethyst")
+        .build();
+
+    discord.update_presence(presence)?;
     loop {
-        discord.run_callbacks()
+        discord.run_callbacks();
     }
+
+    Ok(())
 }
 ```
 
 ### Documentation
-[here](https://docs.rs/rustcord)
+[docs.rs][docs_rs]
 
 ### Useful links
-[The C API Documentation](https://discordapp.com/developers/docs/rich-presence/how-to)  
+[The C API Documentation][rpc_docs]
 
 ### License
 Apache-2.0
+
+[docs_rs]:(https://docs.rs/rustcord)
+[rpc_docs]:(https://discordapp.com/developers/docs/rich-presence/how-to)
