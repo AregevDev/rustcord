@@ -1,6 +1,6 @@
 # rustcord
 A safe wrapper around the Discord Rich Presence API, updated to the latest library version.  
-Wrapper version: 0.2.3  
+Wrapper version: 0.2.4  
 Discord RPC version: 3.4.0
 
 ### Example
