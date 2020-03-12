@@ -11,7 +11,7 @@ fn main() {
     println!("cargo:rustc-link-search={}", config.join("lib").display());
     println!("cargo:rustc-link-search={}", config.join("lib64").display());
 
-    let include_path = format!("discord-rpc-{}/include", LIB_VERSION);
+    let include_path = "discord-rpc/include".to_string();
 
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
