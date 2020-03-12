@@ -1,8 +1,6 @@
 use std::env;
 use std::path::PathBuf;
 
-const LIB_VERSION: &str = "3.4.0";
-
 fn main() {
     let config = cmake::Config::new("discord-rpc".to_string())
         .define("BUILD_EXAMPLES", "OFF")
